@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>MIMICA</title>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    <body style="padding-top: 70px">
+		<div class="color">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="#">
+      <div>
+        <p><s>MIMCA</s></p>
+      </div>
+    </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="nav navbar-nav navbar-right">
+			<div class = "li">
+          <li class="nav-item active"> <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a> </li></div>
+			<div class="li">
+		  <li class="nav-item active"> <a class="nav-link" href="about.html"> About <span class="sr-only">(current)</span></a></li></div>
+			<div class="li">
+	      <li class="nav-item active"> <a class="nav-link" href="howtouse.html"> How to use? <span class="sr-only">(current)</span></a></li></div>
+			<div class = "li">
+		  <li class="nav-item active"> <a class="nav-link" href="survey.html"> Survey <span class="sr-only">(current)</span></a></li></div>
+			<div class = "li">
+		  <li class="nav-item active"> <a class="nav-link" href="feedback.html"> Feedback <span class="sr-only">(current)</span></a></li></div>
+          <li class="nav-item dropdown">
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a> </div>
+				</li>
+		  </ul>
+</div>
+    </nav>
+		</div>
+<!-- body code goes here -->
+		<div class =  "center">
+		</div>
+		<div align="center"><audio controls></audio>
+		</div>
+		<hr>
+<div class="row">
+  <div class="column" style="background-color:#465260;">
+    <h2>Column 1</h2>
+   <div align="center" class = "centers">
+    <label for="Speech Recognition">Speech Recognition</label>
+    <input type="text" name="" id="speechToText" placeholder="Speak Something" onclick="record()">
+
+    <!-- Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+    </script>
+    </div>
+	</div>
+  <div class="column" style="background-color:#2E4765;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+			</div></div>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+      <script src="js/jquery-3.4.1.min.js"></script>
+      
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.4.1.js"></script>
+	 <footer>
+			 <p><b>Follow us on:</b><br>
+				 <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+	 <p><a href = "mimca@git">Github:mimca@git</a></p>	  
+	 <a href="mailto:mimca@example.com">MAIL ID:mimca@example.com</a></p>
+</footer>
+	  </body>
+	</html>
